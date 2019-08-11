@@ -105,12 +105,3 @@ public class Main extends JavaPlugin implements Listener {
 				return;
 			}
 		}
-		if(logins.getString(_name).equals(ip)) {
-			logger.info("Allowing " + name + " (" + ip + " / " + logins.getString(_name) + ")" );
-			return;
-		} else {
-			event.disallow(PlayerLoginEvent.Result.KICK_OTHER, config.getString("kickreason"));
-			return;
-		}
-	}
-}
